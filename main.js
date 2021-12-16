@@ -53,11 +53,7 @@ function getMessage(event) {
   } else if (radioMantra.checked) {
     var message = mantras[getRandomIndex(mantras)];
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 1ab3aa9610eee41a4d360e75a5021d7590967ee1
   meditationBell.classList.toggle("hidden");
   displayMessage.classList.toggle("hidden");
   displayMessage.innerText = message;
