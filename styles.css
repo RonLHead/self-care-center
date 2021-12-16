@@ -17,7 +17,6 @@ form {
 }
 
 .spacing {
-  /* padding: 100px; */
   margin: 100px;
 }
 
@@ -50,8 +49,21 @@ form {
   justify-content: space-evenly;
 }
 
+.radio-container input {
+  clip: auto;
+}
+
 .meditate-box {
   font-style: normal;
   border: 5px;
   padding: 60px;
   width: 45%
+}
+
+.hidden {
+  display: none!important;
+}
+
+.message-display {
+  font-size: 1.5em;
+}
