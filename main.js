@@ -2,8 +2,13 @@ var receiveMessage = document.querySelector('.receive-button');
 var radioAffirmation = document.querySelector('#affirmation');
 var radioMantra = document.querySelector('#mantra');
 var meditationBell = document.querySelector('#meditate-bell');
-var displayMessage = document.querySelector('#message-display')
-// var message = "";
+var displayMessage = document.querySelector('#message-display');
+var inputName = document.querySelector('#input');
+var welcomePage = document.querySelector('.welcome-box');
+var mainPage = document.querySelector('.main-page');
+var userName = document.querySelector('#user-name');
+var userHere = document.querySelector('.welcome-user');
+var box = document.querySelector('.box')
 
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -41,6 +46,7 @@ var mantras = [
 
 receiveMessage.addEventListener('click', getMessage);
 
+inputName.addEventListener('click', showPage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -48,13 +54,23 @@ function getRandomIndex(array) {
 
 function getMessage(event) {
   event.preventDefault();
+
   if (radioAffirmation.checked) {
     var message = affirmations[getRandomIndex(affirmations)];
   } else if (radioMantra.checked) {
     var message = mantras[getRandomIndex(mantras)];
   }
-  
+
   meditationBell.classList.toggle("hidden");
   displayMessage.classList.toggle("hidden");
   displayMessage.innerText = message;
+}
+
+function showPage() {
+  var getUser = `Welcome ${userName.value}`;
+
+  welcomePage.classList.toggle("hidden");
+  mainPage.classList.toggle("hidden");
+
+  userHere.innerHTML = getUser;
 }
