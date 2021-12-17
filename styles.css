@@ -16,6 +16,30 @@ form {
   justify-content: center;
 }
 
+.enter-name {
+
+}
+
+.welcome-box {
+  padding: 10px;
+  width: 35%;
+  background: #ffffff;
+  font-style: italic;
+  color: #000000;
+  border-radius: 8px;
+  position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+.main-page {
+
+}
+
+
+
 .spacing {
   margin: 100px;
 }
