@@ -66,17 +66,17 @@ function getMessage(event) {
   displayMessage.innerText = message;
 }
 
-function showPage(event) {
-  event.preventDefault();
-  var getUser = '';
+function showPage() {
+  var getUser = userName.value;
+
+  console.log(getUser)
 
   welcomePage.classList.toggle("hidden");
   mainPage.classList.toggle("hidden");
 
-  getUser += `
-  <h1 class="heading">Welcome ${userName.innerText}</h1>`
+  userHere.innerHTML += `
+  Welcome ${getUser}`;
 
   userHere.innerHTML = getUser;
-  console.log(userName.innerText)
-
+  console.log(userHere)
 }
