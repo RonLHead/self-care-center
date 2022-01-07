@@ -61,8 +61,8 @@ function getMessage(event) {
     var message = mantras[getRandomIndex(mantras)];
   }
 
-  meditationBell.classList.toggle("hidden");
-  displayMessage.classList.toggle("hidden");
+  meditationBell.classList.add("hidden");
+  displayMessage.classList.remove("hidden");
   displayMessage.innerText = message;
 }
 
